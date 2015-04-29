@@ -1,0 +1,113 @@
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    height: 100%;
+    max-height: 100%;
+    font-family: helvetica, arial, sans-serif;
+    font-size: 11pt;
+}
+
+#framecontent{
+    position: absolute;
+    top: 30px;
+    bottom: 0;
+    left: 0;
+    width: 250px; /*Width of frame div*/
+    height: 100%;
+    overflow: scroll; /*Disable scrollbars. Set to "scroll" to enable*/
+    background: #fff;
+    font-size: 10pt;
+}
+
+#filetree {
+    margin: 5px;
+}
+
+#header {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    height: 23px;
+    margin-bottom: 2px;
+    padding: 5px 5px 0 5px;
+    background-color: #f5f5f5;
+}
+
+#header h1 {
+    font-size: 14px;
+    margin:0;
+    display:inline;
+}
+
+#maincontent{
+    position: fixed;
+    top: 30px;
+    right: 0;
+    left: 250px; /*Set right value to WidthOfFrameDiv*/
+    bottom: 0;
+    overflow: auto;
+    background: #fff;
+
+    z-index: -2;
+}
+
+#codecontent {
+    margin:0;
+    padding:0;
+    border:none;
+    background: inherit;
+    width: 100%;
+}
+
+#gutter {
+    position: fixed;
+    top: 70px;
+    right: 0;
+    left: 250px; /*Set right value to WidthOfFrameDiv*/
+    bottom: 0;
+    overflow: hidden;
+    z-index: -1;
+    width: 45px;
+    height: 100%;
+    background-color: #ddd;
+    border-right: 2px solid #6CE26C;
+}
+
+.project-entry table {
+    border: none;
+}
+
+.project-entry table td {
+    border: none;
+    padding: 0 0 5px 0;
+    vertical-align: top;
+}
+
+.project-entry table img {
+    float: none;
+    width: auto;
+    height: auto;
+    margin: 0 2px 0 0;
+}
+
+.project-entry p {
+    padding: 0;
+    margin: 0 0 5px 0;
+}
+
+
+.innertube{
+
+}
+
+* html body{ /*IE6 hack*/
+    padding: 0 200px 0 0; /*Set value to (0 WidthOfFrameDiv 0 0)*/
+}
+
+* html #maincontent{ /*IE6 hack*/
+    height: 100%;
+    width: 100%;
+}
